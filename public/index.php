@@ -19,3 +19,5 @@ require '../src/routes/customers.php';
 
 
 $app->run();
+
+?>

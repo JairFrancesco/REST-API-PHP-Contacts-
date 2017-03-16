@@ -102,7 +102,7 @@ $app->put('/api/customers/{id}', function(Request $request, Response $response){
 				address = :address,
 				city = :city,
 				state = :state
-			VALUES id=$id";
+			WHERE id=$id";
 
 	try {
 		// get DB Object
@@ -132,7 +132,7 @@ $app->put('/api/customers/{id}', function(Request $request, Response $response){
 $app->delete('/api/customers/{id}', function(Request $request, Response $response){
 	$id = $request->getAttribute('id');
 
-	$sql = "DELETE * FROM customers WHERE id=$id";
+	$sql = "DELETE FROM customers WHERE id=$id";
 
 	try {
 		// get DB Object
@@ -151,4 +151,3 @@ $app->delete('/api/customers/{id}', function(Request $request, Response $respons
 });
 
 ?>
-
